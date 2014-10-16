@@ -2,6 +2,14 @@ var path = require('path');
 
 module.exports = function(grunt) {
   grunt.initConfig({
+    cssmin: {
+      tox_webfont: {
+        files: {
+          'fonts/tox-webfont.min.css': ['fonts/*.css']
+        }
+      }
+    },
+
     webfont: {
       icons: {
         src: 'submodules/Tox-UI/**/*.svg',
@@ -23,7 +31,8 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-webfont');
 
-  grunt.registerTask('default', ['webfont']);
+  grunt.registerTask('default', ['webfont', 'cssmin']);
 };
