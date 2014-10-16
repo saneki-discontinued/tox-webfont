@@ -7,15 +7,17 @@ module.exports = function(grunt) {
         src: 'submodules/Tox-UI/**/*.svg',
         dest: 'fonts',
         options: {
-          font: 'toxui',
+          font: 'tox-webfont',
+          hashes: false,
+          rename: function(name){
+            return path.basename(name).replace(/_/g, '-');
+          },
           templateOptions: {
             baseClass: 'tox-font',
             classPrefix: 'tox-font-',
             mixinPrefix: 'tox_font_'
           },
-          rename: function(name){
-            return path.basename(name).replace(/_/g, '-');
-          }
+          types: ['eot','woff','ttf','svg']
         }
       }
     }
