@@ -1,0 +1,3 @@
+[submodule "submodules/Tox-UI"]
+	path = submodules/Tox-UI
+	url = https://github.com/ItsDuke/Tox-UI
