@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 
     _clean: {
       after_copy: ['fonts/*.css', 'fonts/*.html'],
-	  build: ['css/', 'demo/', 'fonts/']
+      build: ['css/', 'demo/', 'fonts/']
     },
 
     webfont: {
