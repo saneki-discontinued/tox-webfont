@@ -1,7 +1,9 @@
 {
   "name": "Tox-UI-Font",
+  "description": "Tox webfont built from Tox-UI",
   "version": "0.0.0",
-  "private": true,
+  "keywords": ["tox", "font", "Tox-UI", "webfont"],
+  "repository": "https://github.com/saneki/Tox-UI-Font",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-cssmin": "~0.10.0",
