@@ -11,14 +11,21 @@ module.exports = function(grunt) {
     },
 
     'string-replace': {
-      fix_font_path: {
-        files: [
-          { 'fonts/tox-webfont.html': 'fonts/tox-webfont.html' }
-        ],
+      fix_demo_font_path: {
+        files: [ { 'fonts/tox-webfont.html': 'fonts/tox-webfont.html' } ],
         options: {
           replacements: [{
-            pattern: /tox-webfont\.(eot|svg|ttf|woff)/g,
-            replacement: 'fonts/tox-webfont.$1'
+            pattern: /(tox-webfont\.(eot|svg|ttf|woff))/g,
+            replacement: 'fonts/$1'
+          }]
+        }
+      },
+      fix_css_font_path: {
+        files: [ { 'fonts/tox-webfont.css': 'fonts/tox-webfont.css' } ],
+        options: {
+          replacements: [{
+            pattern: /(tox-webfont\.(eot|svg|ttf|woff))/g,
+            replacement: '../fonts/$1'
           }]
         }
       }
@@ -72,8 +79,10 @@ module.exports = function(grunt) {
 
   grunt.renameTask('clean', '_clean');
 
+  grunt.registerTask('fix_font_paths', ['string-replace']);
+
   grunt.registerTask('default',
-    ['webfont', 'string-replace:fix_font_path', 'cssmin', 'copy:main', '_clean:after_copy']);
+    ['webfont', 'string-replace', 'cssmin', 'copy:main', '_clean:after_copy']);
 
   grunt.registerTask('clean', ['_clean:build']);
 };

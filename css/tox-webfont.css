@@ -4,17 +4,17 @@
 
 @font-face {
 	font-family:"tox-webfont";
-	src:url("tox-webfont.eot");
+	src:url("../fonts/tox-webfont.eot");
 	font-weight:normal;
 	font-style:normal;
 }
 @font-face {
 	font-family:"tox-webfont";
-	src:url("tox-webfont.eot");
-	src:url("tox-webfont.eot?#iefix") format("embedded-opentype"),
-		url("tox-webfont.woff") format("woff"),
-		url("tox-webfont.ttf") format("truetype"),
-		url("tox-webfont.svg?#tox-webfont") format("svg");
+	src:url("../fonts/tox-webfont.eot");
+	src:url("../fonts/tox-webfont.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/tox-webfont.woff") format("woff"),
+		url("../fonts/tox-webfont.ttf") format("truetype"),
+		url("../fonts/tox-webfont.svg?#tox-webfont") format("svg");
 	font-weight:normal;
 	font-style:normal;
 }
